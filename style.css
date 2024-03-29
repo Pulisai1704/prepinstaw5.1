@@ -1,0 +1,35 @@
+/* Custom styling for city elements */
+.city {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+    /* Align contents (including images) in the center */
+  }
+  
+  .city h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .city p {
+    margin-bottom: 0;
+    color: #666;
+  }
+  
+  pune.jpeg {
+    max-width: 50px;
+    /* Set a maximum width for images */
+    max-height: 50px;
+    /* Set a maximum height for images */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin: 0 auto;
+    /* Center images horizontally */
+    display: block;
+    /* Ensure margin auto works */
+  }

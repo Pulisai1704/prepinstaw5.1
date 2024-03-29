@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cities</title>
+<style>
+  /* Custom styling for body */
+  body {
+    background-color: #f0f0f0 !important; /* Light gray background color */
+  }
+
+  /* Custom styling for city elements */
+  .city {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* White background color for city cards */
+  }
+
+  .city h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .city p {
+    margin-bottom: 0;
+    color: #666;
+  }
+
+  .city img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div id="cities-container"></div>
+
+<script>
+const citiesContainer = document.getElementById('cities-container');
+
+// Define an array of cities with their information including image filenames
+const cities = [
+  { name: 'Pune', population: '3.1 million', state: 'Maharashtra', image: 'pune.jpeg' },
+  { name: 'Bangalore', population: '12.3 million', state: 'Karnataka', image: 'beng.jpeg' },
+  { name: 'Delhi', population: '18.9 million', state: 'Delhi', image: 'delhi.jpeg' }
+];
+
+// Iterate over each city and create HTML elements for them
+cities.forEach((city) => {
+  const cityElement = document.createElement('div');
+  cityElement.classList.add('city');
+
+  // Create an h2 element for the city name
+  const cityName = document.createElement('h2');
+  cityName.textContent = city.name;
+
+  // Create a p element for the city population and state
+  const cityInfo = document.createElement('p');
+  cityInfo.textContent = `Population: ${city.population}, State: ${city.state}`;
+
+  // Create an image element for the city
+  const cityImage = document.createElement('img');
+  cityImage.src = city.image; // Set the image source
+  cityImage.alt = city.name;
+
+  // Append city name, info, and image to city container
+  cityElement.appendChild(cityName);
+  cityElement.appendChild(cityInfo);
+  cityElement.appendChild(cityImage);
+
+  // Append city container to cities container
+  citiesContainer.appendChild(cityElement);
+});
+</script>
+
+</body>
+</html>
